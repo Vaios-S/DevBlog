@@ -1,6 +1,5 @@
-import { useParams } from "react-router";
 import { articles } from "../data/articles.js";
-import { Link } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import NotFound from "./NotFound.jsx";
 
 export default function ArticleDetail() {
