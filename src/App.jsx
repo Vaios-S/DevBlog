@@ -7,6 +7,9 @@ import Author from "./components/Author";
 import Login from "./components/Login";
 import Dashboard from "./components/Dashboard";
 import NotFound from "./components/NotFound";
+import DashboardSettings from "./components/DashboardSettings";
+import DashboardNewArticles from "./components/DashboardNewArticles";
+import DashboardHome from "./components/DashboardHome";
 
 function App() {
   return (
@@ -20,7 +23,11 @@ function App() {
           <Route path="/articles/:articleId" element={<ArticleDetail />} />
           <Route path="/author/:authorId" element={<Author />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/dashboard" element={<Dashboard />}>
+            <Route index element={<DashboardHome />} />
+            <Route path="settings" element={<DashboardSettings />} />
+            <Route path="new-articles" element={<DashboardNewArticles />} />
+          </Route>
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
