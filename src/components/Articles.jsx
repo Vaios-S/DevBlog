@@ -3,14 +3,19 @@ import { Link } from "react-router-dom";
 
 export default function Articles() {
   return (
-    <div>
+    <div className="mx-auto max-w-5xl p-6">
       {articles.map((article) => (
-        <div key={article.id}>
+        <div
+          key={article.id}
+          className="mb-4 rounded-xl border border-slate-200 bg-white p-5 shadow-sm transition hover:shadow-md"
+        >
           {" "}
           <Link to={`/articles/${article.id}`}>
-            <h2>{article.title}</h2>
+            <h2 className="mb-2 text-xl font-bold text-slate-800">
+              {article.title}
+            </h2>
           </Link>
-          <p>{article.authorName}</p>
+          <p className="text-sm text-slate-500">{article.authorName}</p>
         </div>
       ))}
     </div>

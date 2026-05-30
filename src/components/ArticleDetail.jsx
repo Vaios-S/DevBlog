@@ -12,12 +12,17 @@ export default function ArticleDetail() {
   }
 
   return (
-    <div>
-      <h2>{article.title}</h2>
-      <Link to={`/author/${article.authorId}`}>
-        <h2>{article.authorName}</h2>
+    <div className="mx-auto max-w-3xl p-6">
+      <h2 className="mb-2 text-4xl font-bold">{article.title}</h2>
+      <Link
+        className="mb-6 inline-block text-cyan-600 hover:underline"
+        to={`/author/${article.authorId}`}
+      >
+        <h2 className="text-lg font-semibold text-slate-800">
+          {article.authorName}
+        </h2>
       </Link>
-      <p>{article.body}</p>
+      <p className="leading-8 text-slate-700">{article.body}</p>
     </div>
   );
 }

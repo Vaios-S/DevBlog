@@ -20,10 +20,11 @@ export default function DashboardNewArticles() {
 
   return (
     <div>
-      <h2>New Article</h2>
+      <h2 className="mb-3 text-3xl font-bold">New Article</h2>
 
-      <form onSubmit={handleSubmit}>
+      <form className="space-y-4" onSubmit={handleSubmit}>
         <input
+          className="w-full rounded-lg border p-3"
           type="text"
           placeholder="Article Title"
           value={title}
@@ -33,6 +34,7 @@ export default function DashboardNewArticles() {
         <br />
 
         <textarea
+          className="h-40 w-full rounded-lg border p-3"
           placeholder="Article Body"
           value={body}
           onChange={(e) => setBody(e.target.value)}
@@ -40,7 +42,12 @@ export default function DashboardNewArticles() {
 
         <br />
 
-        <button type="submit">Create Article</button>
+        <button
+          className="rounded-lg bg-cyan-600 px-5 py-2 text-white hover:bg-cyan-700"
+          type="submit"
+        >
+          Create Article
+        </button>
       </form>
     </div>
   );

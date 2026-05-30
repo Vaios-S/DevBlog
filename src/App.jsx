@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { suspense } from "react";
+import React, { Suspense } from "react";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import Login from "./components/Login";
